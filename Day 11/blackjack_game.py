@@ -22,9 +22,7 @@ a = False
 
 while not a: # user 카드 뽑기 과정 반복
     
-
     
-
     keep_game = input("Type 'y' to get another card, type 'n' to pass: ")
 
 if keep_game == "n":
