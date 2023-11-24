@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2023-11-23T13:09:50.547Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="jsUvp-RNfRETjXzfwvj_" version="22.1.2" type="device">
+<mxfile host="Electron" modified="2023-11-23T13:12:07.668Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="qODAgRAOd1YV3Q01dvMN" version="22.1.2" type="device">
   <diagram id="BxO6klJEb_uLm9-A6uWJ" name="Page-1">
     <mxGraphModel dx="1098" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1920" math="0" shadow="0">
       <root>
@@ -28,7 +28,7 @@
         <mxCell id="D96x7bOmITaF-tAiG1XP-36" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="7" target="D96x7bOmITaF-tAiG1XP-32" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="7" value="랜덤 숫자 생성&lt;br&gt;11, 1~9, 10 x 3 개&amp;nbsp;&lt;br&gt;user : 2개 (덧셈 결과 출력)&lt;br&gt;pc : 1개&lt;br&gt;user choice y or n" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=12;gradientColor=none;shape=rhombus;perimeter=rhombusPerimeter;" parent="1" vertex="1">
+        <mxCell id="7" value="랜덤 숫자 생성&lt;br&gt;11, 1~9, 10 x 3 개&amp;nbsp;&lt;br&gt;user : 2개 (덧셈 결과 출력)&lt;br&gt;dealer : 1개&lt;br&gt;user choice y or n" style="rounded=0;whiteSpace=wrap;html=1;strokeWidth=1;fontSize=12;gradientColor=none;shape=rhombus;perimeter=rhombusPerimeter;" parent="1" vertex="1">
           <mxGeometry x="480" y="420" width="240" height="160" as="geometry" />
         </mxCell>
         <mxCell id="10" value="Yes" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=12;" parent="1" vertex="1">
