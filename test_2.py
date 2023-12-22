@@ -1,8 +1,13 @@
-i = 50
+level = "hard"
 
-def foo():
-    i = 100
-    return i
+if level == "hard":
+    print("You have 5 attempts remaining to guess the number.")
+    life = 5
 
-foo()
-print(i)
+def lose_life():
+    global life
+    life -= 1
+
+lose_life()
+
+print(life)
