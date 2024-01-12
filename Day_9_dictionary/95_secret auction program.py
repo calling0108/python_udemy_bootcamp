@@ -1,5 +1,4 @@
 # from replit import clear
-# vscode에서 replit module이 작동하지 않는 듯. Replit DB is not configured라고 출력됨
 # HINT: You can call clear() to clear the output in the console.
 
 from art import logo

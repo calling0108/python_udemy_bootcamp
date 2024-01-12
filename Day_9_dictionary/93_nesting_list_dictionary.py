@@ -40,3 +40,6 @@ travel_log_2 = [
 },
 ]
 
+print(f"printed is {travel_log_2[0]['cities_visited']}") # printed is ['Paris', 'Lille', 'Dijon']
+
+print(travel_log_2[0]["country"]) # France
