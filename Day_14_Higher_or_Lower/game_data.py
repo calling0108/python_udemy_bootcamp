@@ -300,3 +300,6 @@ data = [
         'country': 'United States'
     }
 ]
+
+# list(data)의 요소 개수 확인 방법_len() 사용
+print(len(data))
