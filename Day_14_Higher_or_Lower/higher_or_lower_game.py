@@ -6,7 +6,7 @@ import random
 
 
 # logo print
-def logo():
+def logo_image():
     print(logo)
 
 # vs art print
@@ -23,25 +23,51 @@ def choice_player():
 player_a = choice_player()
 player_b = choice_player()
 
-# should_continue = False
+logo_image()
 
-# while not should_continue:
-print("Compare A: " + player_a["name"] + ", " + player_a["description"] + ", " + player_a["country"])
+score = 0
 
-vs_image()
+should_continue = False
 
-print("Compare B: " + player_b["name"] + ", " + player_b["description"] + ", " + player_b["country"])
+while not should_continue:
+    print("Compare A: " + player_a["name"] + ", " + player_a["description"] + ", " + player_a["country"])
+    print("A :" + str(player_a["follower_count"]))
 
-choice = input("Who has more followers? Type 'A' or 'B': ").upper()
+    vs_image()
 
-# if choice == "A":
-#     if player_a["follower_count"] < player_b["follower_count"]:
-#         should_continue = True
-# elif choice == "B":
+    print("Against B: " + player_b["name"] + ", " + player_b["description"] + ", " + player_b["country"])
+    print("B :" + str(player_b["follower_count"]))
 
-    # 2개의 팔로워 수를 비교해야 함
+    choice = input("Who has more followers? Type 'A' or 'B': ").upper()
+
     
-        # 게임 종료
-    #     should_continue = True
-    # elif player_a["follower_count"] > player_b["follower_count"]:
-    #     player_b = choice_player()
+
+    # A와 B의 Follower 수를 비교
+    if player_a["follower_count"] < player_b["follower_count"]:
+        if choice == "A":
+            should_continue = True
+            print(f"Sorry, that's wrong. Final score: {score}")
+        elif choice == "B":
+            score += 1
+            clear()
+            player_a = player_b
+            player_b = choice_player()
+            while player_b == player_a:
+                player_b = choice_player()
+            print(score)
+            logo_image()
+            print(f"You're right! Current score: {score}.")
+    elif player_a["follower_count"] > player_b["follower_count"]:
+        if choice == "A":
+            score += 1
+            clear()
+            player_b = choice_player()
+            while player_b == player_a:
+                player_b = choice_player()
+            print(score)
+            logo_image()
+            print(f"You're right! Current score: {score}.")
+        elif choice == "B":
+            should_continue = True
+            print(f"Sorry, that's wrong. Final score: {score}")
+
