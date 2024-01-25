@@ -9,6 +9,10 @@ water = resources["water"]
 milk = resources["milk"]
 coffee = resources["coffee"]
 
+reduce_water = 0
+reduce_milk = 0
+reduce_coffee = 0
+
 
 def insert_coins():
     print("Please insert coins.")
@@ -38,12 +42,8 @@ def insert_coins():
         print(f"Here is ${refund_money} in change.")
         print(f"Here is your {user_choice} ☕. Enjoy!")
 
-# Check resources sufficient?
-def resources_sufficient():
-    if water < 0 or milk < 0 or coffee < 0:
-        print("Sorry there is not enough ")
-    else:
-        insert_coins()
+
+
 
 # Turn off the coffee machine by entering "off" to the prompt.
 should_continue = False
@@ -68,28 +68,50 @@ while not should_continue:
 
     elif user_choice == "espresso":
         price = 1.50
-        water = resources["water"] - 50
-        coffee = resources["coffee"] - 18
-        resources_sufficient()
+        reduce_water = 50
+        reduce_milk = 0
+        reduce_coffee = 18
+        
+        # Check resources sufficient?
+        if water < 50 or coffee < 18:
+            print("Sorry there is not enough ")
+        else:
+            insert_coins()
+
 
     elif user_choice == "latte":
         price = 2.50
-        water = resources["water"] - 200
-        coffee = resources["coffee"] - 24
-        milk = resources["milk"] - 150
-        resources_sufficient()
+        reduce_water = 200
+        reduce_milk = 150
+        reduce_coffee = 24
+
+
+        # Check resources sufficient?
+        if water < 200 or milk < 150 or coffee < 24:
+            print("Sorry there is not enough ")
+        else:
+            insert_coins()
+
 
     elif user_choice == "cappuccino":
         price = 3.00
-        water = resources["water"] - 250
-        coffee = resources["coffee"] - 24
-        milk = resources["milk"] - 100
-        resources_sufficient()
+        reduce_water = 250
+        reduce_milk = 100
+        reduce_coffee = 24
+
+        # Check resources sufficient?
+        if water < 250 or milk < 100 or coffee < 24:
+            print("Sorry there is not enough ")
+        else:
+            insert_coins()
 
 
-   
+    water = resources["water"] - reduce_water
+    coffee = resources["coffee"] - reduce_coffee
+    milk = resources["milk"] - reduce_milk
 
 
+    
 # Check resources sufficient?
 
 
