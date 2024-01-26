@@ -8,6 +8,7 @@ from main import MENU, resources
 water = resources["water"]
 milk = resources["milk"]
 coffee = resources["coffee"]
+money = 0   # 판매 금액
 
 reduce_water = 0
 reduce_milk = 0
@@ -51,7 +52,6 @@ should_continue = False
 
 while not should_continue:
 
-    money = 0
 
     # Prompt user by asking "What would you like? (espresso / latte / cappuccino)
     user_choice = input("What would you like? (espresso / latte / cappuccino): ").lower()
@@ -73,7 +73,7 @@ while not should_continue:
         reduce_coffee = 18
         
         # Check resources sufficient?
-        if water < 50 or coffee < 18:
+        if lived_water < 50 or lived_coffee < 18:
             print("Sorry there is not enough ")
         else:
             insert_coins()
@@ -87,7 +87,7 @@ while not should_continue:
 
 
         # Check resources sufficient?
-        if water < 200 or milk < 150 or coffee < 24:
+        if lived_water < 200 or lived_milk < 150 or lived_coffee < 24:
             print("Sorry there is not enough ")
         else:
             insert_coins()
@@ -100,15 +100,15 @@ while not should_continue:
         reduce_coffee = 24
 
         # Check resources sufficient?
-        if water < 250 or milk < 100 or coffee < 24:
+        if lived_water < 250 or lived_milk < 100 or lived_coffee < 24:
             print("Sorry there is not enough ")
         else:
             insert_coins()
 
 
-    water = resources["water"] - reduce_water
-    coffee = resources["coffee"] - reduce_coffee
-    milk = resources["milk"] - reduce_milk
+    lived_water = water - reduce_water
+    lived_coffee = coffee - reduce_coffee
+    lived_milk = milk - reduce_milk
 
 
     
