@@ -1,4 +1,4 @@
-from main import MENU, resources
+from main_2 import MENU, resources
 
 # 확인차 출력
 # print(resources)

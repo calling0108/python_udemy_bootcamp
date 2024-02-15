@@ -3,7 +3,7 @@ from prettytable import PrettyTable
 table = PrettyTable()
 # print(table)
 
-table.field_names = ["Pokemon Name", "Type"]
+table.field_names = ["Poketmon Name", "Type"]
 
 table.add_rows(
     [

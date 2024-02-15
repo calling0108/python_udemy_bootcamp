@@ -1,13 +1,9 @@
-level = "hard"
+class Food:
+    def EatPizza():
+        print("yam")
 
-if level == "hard":
-    print("You have 5 attempts remaining to guess the number.")
-    life = 5
+    def EatPizza_2(self):
+        print("yamyam")
 
-def lose_life():
-    global life
-    life -= 1
-
-lose_life()
-
-print(life)
+good = Food()
+good.EatPizza_2()
